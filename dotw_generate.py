@@ -91,7 +91,7 @@ def main():
         print(start, event['summary'])
     '''
     while (currentMonday <= lastMonday):
-        event = createEventObj(devsIter.next(), currentMonday, currentMonday + datetime.timedelta(days=4))
+        event = createEventObj(devsIter.next(), currentMonday, currentMonday + datetime.timedelta(days=5))
         service.events().insert(calendarId='redfin.com_fsrm766jm7769tkjrqsdghu2mk@group.calendar.google.com', body=event).execute()
         currentMonday += datetime.timedelta(days=7)
 
